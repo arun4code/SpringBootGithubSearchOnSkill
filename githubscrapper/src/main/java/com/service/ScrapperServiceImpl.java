@@ -28,7 +28,7 @@ import com.model.GithubLinks;
 public class ScrapperServiceImpl implements ScrapperService {
 	public static final String BASE_URL = "https://api.github.com/";
 
-	public static final String _TOKEN = "dd77907977c268130277c18c872819580f4355c5";
+	public static final String _TOKEN = "ADD YOUR AUTH CODE";
 	
 	@Override
 	public List<GithubData> fetchDataFromGithub(String skill) throws Exception {
