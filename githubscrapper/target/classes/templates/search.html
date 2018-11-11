@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+
+    <title>Search</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Enter skills</h1>
+            <form th:action="@{/searchskill/searchskill}" method="post">                
+                <div class="form-group">
+                    <label for="skill">Skill</label>:
+                    <input type="text"
+                           id="skill"
+                           name="skill"
+                           class="form-control"
+                           autofocus="autofocus"
+                           placeholder="skill"
+                           />
+                </div>                
+                
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <input type="submit"
+                                   name="skill-submit"
+                                   id="skill-submit"
+                                   class="form-control btn btn-info"
+                                   value="Submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

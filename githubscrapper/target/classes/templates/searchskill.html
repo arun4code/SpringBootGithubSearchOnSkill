@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>result List</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Skill Search result</h1>
+      <a href="/searchskill">New Search</a>
+      <br/><br/>
+      <div>
+         <table border="1">
+            <tr>            	
+               <th>LoginID</th>
+               <th>UserName</th>
+               <th>Avatar_URL</th>
+               <th>Followers#</th>               
+            </tr>           
+           	<tr th:each ="result : ${resultList}">
+               <td th:utext="${result.login}">...</td>
+               <td th:utext="${result.name}">...</td>
+               <td th:utext="${result.avatar_url}">...</td>
+               <td th:utext="${result.followers}">...</td>                                  
+            </tr>           
+         </table>
+      </div>
+   </body>
+</html>
